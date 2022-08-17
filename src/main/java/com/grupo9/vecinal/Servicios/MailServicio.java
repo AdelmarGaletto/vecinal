@@ -43,7 +43,7 @@ public class MailServicio {
 		helper.setSubject(subject);
 
 		content = content.replace("[[name]]", usuario.getNombre() + " " + usuario.getApellido());
-		String verifyURL = "http://localhost:8081/usuarios/recuperar/" + usuario.getCodValidacion();
+		String verifyURL = "http://localhost:8080/usuarios/recuperar/" + usuario.getCodValidacion();
 
 		content = content.replace("[[URL]]", verifyURL);
 
@@ -70,7 +70,7 @@ public class MailServicio {
 		helper.setSubject(subject);
 
 		content = content.replace("[[name]]", usuario.getNombre() + " " + usuario.getApellido());
-		String verifyURL = "http://localhost:8081/usuarios/verificacion/" + usuario.getCodValidacion();
+		String verifyURL = "http://localhost:8080/usuarios/verificacion/" + usuario.getCodValidacion();
 
 		content = content.replace("[[URL]]", verifyURL);
 
